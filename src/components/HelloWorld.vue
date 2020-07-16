@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-	<p>{{gitTitle}}</p>
-	<p>{{time}}</p>
+	<p>{{ gitTitle }}</p>
+	<p>{{ time }}</p>
   </div>
 </template>
 
