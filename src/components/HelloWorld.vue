@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+	<p>{{gitTitle}}</p>
+	<p>{{time}}</p>
   </div>
 </template>
 
@@ -9,7 +11,9 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+	  gitTitle: 'this is git test title',
+	  time: '2020-07-16'
     }
   }
 }
