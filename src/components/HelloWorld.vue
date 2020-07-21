@@ -1,9 +1,6 @@
 <template>
   <div class="hello">
     <p>{{ time }}</p>
-    <p><span v-html="rawHtml"></span></p>
-    <p>{{ reversed }}</p>
-    <p>{{ cause }}</p>
   </div>
 </template>
 
@@ -12,10 +9,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      time: '2020-07-16',
-      test: '练习vue',
-      rawHtml: '<span style="color:red;">This is red</span>',
-      cause: '用来测试提交git'
+      time: '2020-07-16'
     }
   },
   computed: {
