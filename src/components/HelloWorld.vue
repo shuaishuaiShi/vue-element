@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
-    <p>{{ number }}</p>
-    <p>{{ time }}</p>
-    <input type="text" v-model="test">
+    <ul>
+      <li v-for="(item,index) in styleObj" :key="index">{{item}}</li>
+    </ul>
   </div>
 </template>
 
@@ -11,9 +11,12 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      time: new Date(),
       test: '',
-      number: 0
+      number: 0,
+      styleObj:{
+        color: 'red',
+        textAlign: 'center'
+      }
     }
   },
   computed: {
@@ -22,7 +25,7 @@ export default {
     }
   },
   created: function(){
-    this.debounceGetAnswer = _.debounce(this.getAnswer, 500)
+    this.debounceGetAnswer = _.debounce(this.getAnswer, 500);
   },
   methods: {
     getAnswer: function(){
