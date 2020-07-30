@@ -3,6 +3,9 @@
     <ul>
       <li v-for="(item,index) in styleObj" :key="index">{{item}}</li>
     </ul>
+    <div>
+      <button></button>
+    </div>
   </div>
 </template>
 
@@ -16,7 +19,8 @@ export default {
       styleObj:{
         color: 'red',
         textAlign: 'center'
-      }
+      },
+      testArray: ['0','1','2']
     }
   },
   computed: {
@@ -30,6 +34,9 @@ export default {
   methods: {
     getAnswer: function(){
       this.number++;
+    },
+    ArrayPractice: function(){
+      
     }
   },
   watch: {
