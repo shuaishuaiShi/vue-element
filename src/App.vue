@@ -5,6 +5,17 @@
 </template>
 
 <script>
+import Vue from 'vue'
+
+Vue.component('my-one', {
+  props: ['title'],
+  data: function(){
+    return {
+
+    }
+  },
+  template: '<h3>{{ title }}</h3>'
+})
 export default {
   name: 'App'
 }
