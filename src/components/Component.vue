@@ -14,7 +14,6 @@
 
       <input type="text" v-model.lazy="msg">
       <p>{{msg}}</p>
-      <test></test>
   </div>
 </template>
 
@@ -31,8 +30,13 @@ export default {
             checked: false,
             showlist: [],
             selected: [],
-            msg: 'test'
+            msg: 'test',
+            id: null
         }
+    },
+    created(){
+        this.id = this.$route.query.id;
+        console.log(this.id)
     },
     methods:{
         test: function(){

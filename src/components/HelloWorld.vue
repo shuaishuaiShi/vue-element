@@ -14,7 +14,15 @@
       <button @click="ArrayPractice(8)">sort(顺序)</button>
       <button @click="ArrayPractice(9)">sort(反序)</button>
     </div> -->
-    <test-one :title="title"></test-one>
+
+    <ul>
+      <li @click="jump(1)">
+        <a>跳转到component页面</a>
+      </li>
+      <li @click="jump(2)">
+        <a>跳转到test页面</a>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -76,6 +84,26 @@ export default {
       }
       else if(x === 9) {
         console.log(this.oneArray.sort(function(a,b){return b-a}))
+      }
+    },
+    jump: function(x){
+      if(x === 1){
+        this.$router.push({
+          path: '/Component',
+          query: {
+            id: 1,
+            title: 'Component'
+          }
+        })
+      }
+      else if(x === 2){
+        this.$router.push({
+          path: '/test',
+          query: {
+            id: 2,
+            title: 'test'
+          }
+        })
       }
     }
   },
